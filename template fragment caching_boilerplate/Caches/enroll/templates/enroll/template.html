@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load cache %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Head 1</h1>
+    <h1>Head 2</h1>
+{% cache 30 template%}
+<!-- template is the name of the cache -->
+    <h1>Head 3</h1>
+    <h1>Head 4</h1>
+{% endcache template%}
+</body>
+</html>
